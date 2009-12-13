@@ -1,3 +1,8 @@
 = Queen
+A simple CRUD, scaffolding extension used as a basic example in "How to Create An Extension":http://wiki.github.com/radiant/radiant/how-to-create-an-extension
 
-Description goes here
+Create a queen, view queens, delete a queen, etc. 
+
+Simple routing from the main Radiant application.
+
+Requires "share_layouts":git://github.com/radiant/radiant-share-layouts-extension.git extension.
