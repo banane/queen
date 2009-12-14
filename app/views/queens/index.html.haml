@@ -1,0 +1,16 @@
+%h1 Listing queens
+%table
+  %tr
+    %th Name
+    %th Email
+    %th Kingdom
+= @queens.each do |queen|
+  %tr
+    %td= queen.name
+    %td= queen.email
+    %td= queen.kingdom
+    %td= link_to 'Show', queen
+    %td= link_to 'Edit', edit_queen_path(queen)
+    %td= link_to 'Destroy', queen, :confirm => 'Are you sure?', :method => :delete
+%br
+= link_to 'New queen', new_queen_path
