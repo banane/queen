@@ -1,0 +1,11 @@
+%p
+  %b Name:
+  = @queen.name
+%p
+  %b Email:
+  = @queen.email
+%p
+  %b Kingdom:
+  = @queen.kingdom
+= link_to 'Edit', edit_queen_path(@queen)
+= link_to 'Back', queens_path

@@ -1,0 +1,23 @@
+%h1 Editing queen
+- form_for(@queen) do |f| 
+  %p
+    = f.error_messages 
+  %p
+    = f.label :name 
+    %br
+    = f.text_field :name
+  %p
+    = f.label :email
+    %br
+    = f.text_field :email
+  %p
+    = f.label :kingdom
+    %br    
+    = f.text_field :kingdom
+  %p
+  = f.submit 'Update'
+
+
+= link_to 'Show', @queen
+|
+= link_to 'Back', queens_path

@@ -1,0 +1,15 @@
+%h1 New queen
+- form_for(@queen) do |f|
+  %p= f.error_messages
+  %p 
+    =f.label :kingdom 
+    %br=f.text_field :kingdom
+  %p
+    = f.label :name
+    %br= f.text_field :name
+  %p
+    = f.label :email
+    %br= f.text_field :email
+  %p= f.submit 'Create' 
+%br
+= link_to 'Back', queens_path

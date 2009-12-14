@@ -2,7 +2,7 @@ class QueensController < ApplicationController
   # GET /queens
   # GET /queens.xml
 
-  radiant_layout 'Normal'
+  #radiant_layout 'Normal'
 
   def index
     @queens = Queen.all
@@ -30,7 +30,7 @@ class QueensController < ApplicationController
     @queen = Queen.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html # new.html.haml
       format.xml  { render :xml => @queen }
     end
   end

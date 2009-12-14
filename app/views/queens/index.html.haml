@@ -1,16 +1,16 @@
-%h1 Listing queens
-%table
+%h1 All Queens
+%table{:style=>"border:1px gray solid;"}
   %tr
     %th Name
     %th Email
     %th Kingdom
-= @queens.each do |queen|
-  %tr
-    %td= queen.name
-    %td= queen.email
-    %td= queen.kingdom
-    %td= link_to 'Show', queen
-    %td= link_to 'Edit', edit_queen_path(queen)
-    %td= link_to 'Destroy', queen, :confirm => 'Are you sure?', :method => :delete
-%br
-= link_to 'New queen', new_queen_path
+  - @queens.each do |q|
+    %tr
+      %td= link_to q.name, q
+      %td= q.email
+      %td= q.kingdom
+      %td= link_to 'Show', q
+      %td= link_to 'Edit', edit_queen_path(q)
+      %td= link_to 'Delete', q, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to 'New queen', new_queen_path

@@ -1,0 +1,11 @@
+!!!
+%html
+  %head
+    %title 
+      Queens: 
+      = controller.action_name
+    = stylesheet_link_tag 'scaffold'
+  %body
+    %p{:style=>"font-color:green;font-weight:bold;"}
+      =flash[:notice]
+    = yield
